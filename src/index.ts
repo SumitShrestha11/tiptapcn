@@ -4,7 +4,7 @@ import { addCommand } from "./commands/add";
 const program = new Command()
   .name("tiptapcn")
   .description("Add Tiptap extensions to your project")
-  .version("0.1.0");
+  .version("0.1.1");
 
 program
   .command("add")
