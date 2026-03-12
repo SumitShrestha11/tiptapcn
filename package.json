@@ -1,6 +1,6 @@
 {
   "name": "tiptapcn",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Add Tiptap editor extensions to your project",
   "main": "dist/index.js",
   "bin": {
