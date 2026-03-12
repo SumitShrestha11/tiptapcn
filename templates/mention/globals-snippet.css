@@ -1,0 +1,66 @@
+/* Basic editor styles */
+.tiptap {
+  :first-child {
+    margin-top: 0;
+  }
+
+  .mention {
+    background-color: var(--color-purple-100);
+    border-radius: 0.4rem;
+    box-decoration-break: clone;
+    color: var(--color-purple-500);
+    padding: 0.1rem 0.3rem;
+    &::after {
+      content: "\200B";
+    }
+  }
+
+  [data-decoration-id] {
+    background-color: var(--color-purple-100);
+    border-bottom: 2px dashed var(--color-purple-500);
+    border-radius: 0.2rem;
+    padding: 0 0.18rem;
+    box-decoration-break: clone;
+  }
+
+  [data-decoration-id].is-empty::after {
+    content: "\00A0";
+    border-bottom: 1px dotted var(--color-gray-300);
+  }
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  background: white;
+  border: 1px solid var(--color-gray-100);
+  border-radius: 0.7rem;
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  overflow: auto;
+  padding: 0.4rem;
+  position: relative;
+
+  button {
+    align-items: center;
+    background-color: transparent;
+    border-radius: 0.4rem;
+    display: flex;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    text-align: left;
+    width: 100%;
+
+    &:hover,
+    &:hover.is-selected {
+      background-color: var(--color-gray-100);
+    }
+
+    &.is-selected {
+      background-color: var(--color-gray-100);
+    }
+  }
+}
